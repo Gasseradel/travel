@@ -1,0 +1,450 @@
+/* =========================================================
+   GENERAL
+========================================================= */
+
+body{
+    background-image: url("imgs/ocean.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .7s;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.nav-link{
+    color: white;
+}
+
+.nav{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.nav-link:hover{
+    color: black;
+    transition: .5s;
+}
+
+.btn{
+    color: white;
+}
+
+.bbtn{
+    background-color: transparent;
+    border-radius: 25px;
+    border: 2px solid black;
+    color: black;
+    margin-top: 10px;
+}
+
+.bbtn:hover{
+    background-color: white;
+    transition: .5s;
+}
+
+.nav-link:focus{
+    color: orange;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+#color{
+    color: orange;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+#content1{
+    color: orange;
+    font-weight: bolder;
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    font-family: Freestyle Script;
+}
+
+#content2{
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    letter-spacing: 1.7px;
+}
+
+#content3{
+    color: white;
+    letter-spacing: .5px;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn1,
+.btn2{
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px 1px white;
+    transition: .5s;
+}
+
+.btn1:hover,
+.btn2:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn1{
+    background-color: orange;
+    color: black;
+}
+
+.btn2{
+    margin-left: 50px;
+    border: 1px solid white;
+}
+
+
+/* =========================================================
+   AIRPLANE IMAGE
+========================================================= */
+
+.opacity{
+    height: 345px;
+    width: 345px;
+    border-radius: 50%;
+    margin-right: 100px;
+    animation: animateImg 2s ease-in forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.photo{
+    width: 120px;
+    height: 180px;
+    border-radius: 30px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.photo:hover{
+    scale: 1.1;
+}
+
+
+/* =========================================================
+   TEXT ANIMATION
+========================================================= */
+
+@keyframes animateText{
+    to{
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   IMAGE ANIMATION
+========================================================= */
+
+@keyframes animateImg{
+    to{
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   AIRPLANE MOVEMENT
+========================================================= */
+
+.move{
+    animation: move 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TEXT BOX
+========================================================= */
+
+.text{
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
+    height: 300px;
+    width: 600px;
+    box-shadow: 3px 3px 15px 1px white;
+    animation: animateText 5s ease forwards;
+    opacity: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   TABLET & MOBILE
+   1059px and below
+========================================================= */
+
+@media (max-width: 1059px){
+
+    /* ==================== NAVBAR ==================== */
+
+    .bbtn{
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo{
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .nav-link{
+        text-align: center;
+    }
+
+
+    /* ==================== HERO SECTION ==================== */
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        padding-left: 0;
+    }
+
+    .opacity{
+        order: 1;
+        width: 280px;
+        height: 280px;
+        margin-right: 0;
+    }
+
+    .text{
+        order: 2;
+    }
+
+
+    /* ==================== GALLERY ==================== */
+
+    .galary{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .photo{
+        width: 100px;
+        height: 150px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   689px and below
+========================================================= */
+
+@media (max-width: 689px){
+
+    /* ==================== NAVBAR ==================== */
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .logo{
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .nav-link{
+        text-align: center;
+        font-size: 14px;
+    }
+
+
+    /* ==================== HERO SECTION ==================== */
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+
+    /* ==================== AIRPLANE ==================== */
+
+    .opacity{
+        order: 1;
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+
+    /* ==================== TEXT BOX ==================== */
+
+    .text{
+        order: 2;
+        width: 95%;
+        max-width: 100%;
+        height: auto;
+        padding: 20px 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+
+    /* ==================== TEXT ==================== */
+
+    #content1{
+        font-size: 24px;
+    }
+
+    #content2{
+        font-size: 18px;
+    }
+
+    #content3{
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* ==================== BUTTONS ==================== */
+
+    .btn1,
+    .btn2{
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .btn2{
+        margin-left: 10px;
+    }
+
+
+    /* ==================== GALLERY ==================== */
+
+    .galary{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .photo{
+        width: 45%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+
+    /* ==================== OVERFLOW ==================== */
+
+    html,
+    body{
+        overflow-x: hidden;
+    }
+}
+
+
+/* =========================================================
+   MOVEMENT ANIMATION
+========================================================= */
+
+@keyframes move{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
